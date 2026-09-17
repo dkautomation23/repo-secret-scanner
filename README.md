@@ -1,5 +1,7 @@
 # repo-secret-scanner
 
+[![CI](https://github.com/dkautomation23/repo-secret-scanner/actions/workflows/ci.yml/badge.svg)](https://github.com/dkautomation23/repo-secret-scanner/actions/workflows/ci.yml)
+
 A tiny, dependency-free scanner that catches **leaked secrets before they ship** —
 API keys, tokens, and private keys committed by accident. One Python file, no
 install, non-zero exit code on a hit so it drops straight into a pre-commit hook
