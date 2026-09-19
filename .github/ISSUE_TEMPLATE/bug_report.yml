@@ -1,0 +1,50 @@
+name: Bug report
+description: Something behaves differently from what the README says
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not paste real secrets, even redacted ones from your own scan
+        output. Reproduce with an obvious placeholder of the same shape
+        (`ghp_` + 36 dummy characters, etc.).
+
+        Found a security hole instead? Do not use this form — see SECURITY.md.
+  - type: input
+    id: python-version
+    attributes:
+      label: Python version
+      placeholder: "3.10 or 3.12 (CI's tested versions)"
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: Operating system
+      placeholder: "Windows 11 / Ubuntu 22.04 / macOS 14"
+    validations:
+      required: true
+  - type: textarea
+    id: command
+    attributes:
+      label: Exact command
+      description: Include flags, e.g. `python scan.py . --format json --entropy`
+      render: console
+    validations:
+      required: true
+  - type: textarea
+    id: input
+    attributes:
+      label: Input data
+      description: >-
+        A minimal file or snippet that reproduces the finding (or the miss).
+        Replace any real secret with an obvious placeholder of the same shape
+        and length.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected, and what happened instead
+    validations:
+      required: true
